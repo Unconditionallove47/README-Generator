@@ -1,11 +1,15 @@
 
 // TODO: Include packages needed for this application
 const fs = require('fs');
+const util = require('util');
+
 //fs for filesave
 const inquirer = require('inquirer');
 //inquirer for node
-// TODO: Create an array of questions for user input
-const questions = [''];inquirer.prompt([
+// : Create an array of questions for user input
+const questions = [''];  //FIGURE OUT IF NECCESSARY
+
+inquirer.prompt([
     { 
         type:"input",
         name:"projectName",
@@ -58,7 +62,7 @@ console.log(answers)
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-   fs.writeFile('ReadMeGen.html','Read Me Generator',answers) (err); {
+   fs.writeToFile('ReadMeGen.html','Read Me Generator',answers) (err); {
       if (err) throw err;
       console.log('File Created');
    }
