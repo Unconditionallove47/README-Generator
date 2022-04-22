@@ -24,6 +24,32 @@ const questions = [''];inquirer.prompt([
         type:"input",
         name:"Contribution",
         message:"Did you have any contributors on your project?"
+     },{
+      type:"input",
+      name:"install",
+      message:"Is there any specific install instructions?(packages)"
+
+     },{
+      type:"input",
+      name:"usages",
+      message:"What is the purpose of this program?"
+
+     },{
+      type:"input",
+      name:"testing",
+      message:"Does this program require any testing?"
+     },{
+      type:"input",
+      name:"install",
+      message:"Is there any specific install instructions?(packages)"
+     },{
+      type:"input",
+      name:"gitHubAccount",
+      message:"What is your github account name?"
+     },{
+      type:"input",
+      name:"email",
+      message:"What is the email you want listed for your project?"
      }
   ]). then(function(answers){
 console.log(answers)
@@ -31,7 +57,12 @@ console.log(answers)
 })
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+   fs.writeFile('ReadMeGen.html','Read Me Generator',answers) (err); {
+      if (err) throw err;
+      console.log('File Created');
+   }
+}
 
 // TODO: Create a function to initialize app
 function init() {}
