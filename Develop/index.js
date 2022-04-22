@@ -69,7 +69,15 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+//FIGURE OUT WHY AWAIT DOESNT WORK
+function init() {
+   answers = await prompt();
+   const answerCard = ReadMeGen(answers);
+   console.log('File Written');
+} 
+ if (err)  {
+   console.log(err);
+}
 
 // Function call to initialize app
 init();
