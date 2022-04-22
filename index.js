@@ -2,7 +2,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const util = require('util');
-
+const readMeGen = require("ReadMeGen.html");
+const fileWrite = util.promisify(fs.writeFile);
 //fs for filesave
 const inquirer = require('inquirer');
 //inquirer for node
@@ -63,8 +64,8 @@ console.log(answers)
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-   fs.writeToFile('ReadMeGen.html','Read Me Generator',answers) (err); {
-      if (err) throw err;
+   fs.writeFile(fileWrite);
+   fs.appendFile('ReadMeGen.html','Read Me Generator',answers) (err); {
       console.log('File Created');
    }
 }
@@ -73,7 +74,7 @@ function writeToFile(fileName, data) {
 //FIGURE OUT WHY AWAIT DOESNT WORK
 function init() {
    answers = then.prompt();
-   const answerCard = ReadMeGen(answers);
+   const ReadMeGen = ReadMeGen(answers);
    console.log('File Written');
 } 
 
