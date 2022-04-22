@@ -1,5 +1,4 @@
 
-// TODO: Include packages needed for this application
 const fs = require('fs');
 const util = require('util');
 const readMeGen = require("ReadMeGen.html");
@@ -8,7 +7,6 @@ const fileWrite = util.promisify(fs.writeFile);
 const inquirer = require('inquirer');
 //inquirer for node
 // : Create an array of questions for user input
-const questions = [''];  //FIGURE OUT IF NECCESSARY
 function prompt(){
  return inquirer.prompt([
     { 
@@ -23,7 +21,7 @@ function prompt(){
      },{
         type:"list",
         name:"gitHubLicense",
-        choices:["Mit, ,NONE"],
+        choices:["Mit, Eclipse ,GNU , ISC , NONE"],
         message:"Would you like to include a license for your project?"
      },{
         type:"input",
@@ -74,10 +72,9 @@ function writeToFile(fileName, data) {
 //FIGURE OUT WHY AWAIT DOESNT WORK
 function init() {
    answers = then.prompt();
-   const ReadMeGen = ReadMeGen(answers);
+   const ReadMeGen = fileWrite(answers);
    console.log('File Written');
 } 
-
 
 // Function call to initialize app
 init();
