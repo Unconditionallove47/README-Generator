@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 const util = require('util');
-const readMeGen = require("ReadMeGen.html");
+const readMeGen = require("generateMarkdown.js");
 const fileWrite = util.promisify(fs.writeFile);
 //fs for filesave
 const inquirer = require('inquirer');
