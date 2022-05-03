@@ -1,6 +1,7 @@
 
 const fs = require('fs');
 const util = require('util');
+const README = require('./README.md');
 const generateMarkdown = require("./utils/generateMarkdown.js");
 const fileWrite = util.promisify(fs.writeFile);
 //fs for filesave
@@ -62,8 +63,8 @@ console.log(answers)
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-   fs.writeFile(fileWrite);
-   fs.appendFile('ReadMeGen.md','Read Me Generator',answers) (err); {
+   // fs.writeFile(fileWrite);
+   fs.appendFile('README.md','Read Me Generator',answers) (err); {
       console.log('File Created');
    }
 }
@@ -71,7 +72,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 //FIGURE OUT WHY AWAIT DOESNT WORK
 function init() {
-   prompt().then(data => {return generateMarkdown(data);}).then(readmeInfo => writeToFile(Readme.md, readmeInfo));
+   prompt().then(data => {return generateMarkdown(data);}).then(readmeInfo => writeToFile(README.md, readmeInfo));
 }
 // Function call to initialize app
 init();
