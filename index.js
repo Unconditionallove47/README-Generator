@@ -64,8 +64,14 @@ console.log(answers)
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
    // fs.writeFile(fileWrite);
-   fs.appendFile('README.md','Read Me Generator',answers) (err); {
-      console.log('File Created');
+   fs.writeFile('GeneratedFile.md',data (err)); {
+      if (err) 
+      console.log(err);
+      else{
+         console.log("File written successfully\n");
+         console.log("The written has the following contents:");
+         console.log(fs.readFileSync("GeneratedFile.md", "utf8"));
+      }
    }
 }
 
