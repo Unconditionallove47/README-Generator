@@ -64,21 +64,21 @@ console.log(answers)
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
    // fs.writeFile(fileWrite);
-   fs.writeFile('GeneratedFile.md',data (err)); {
+   fs.writeFile('GeneratedFile.md',data, (err) => {
       if (err) 
       console.log(err);
       else{
          console.log("File written successfully\n");
          console.log("The written has the following contents:");
          console.log(fs.readFileSync("GeneratedFile.md", "utf8"));
-      }
    }
-}
-
+   }
+   )}
 // TODO: Create a function to initialize app
 //FIGURE OUT WHY AWAIT DOESNT WORK
 function init() {
    prompt().then(data => {return generateMarkdown(data);}).then(readmeInfo => writeToFile(README.md, readmeInfo));
 }
+
 // Function call to initialize app
 init();
