@@ -7,7 +7,7 @@ const fileWrite = util.promisify(fs.writeFile);
 //fs for filesave
 const inquirer = require('inquirer');
 //inquirer for node
-const readme = ({ title, description, install, usage, contributions, testing, license, github, linkedin, email }) =>
+const readme = ({ title, description, install, usage, contribution, testing, license, github, linkedin, email }) =>
 // : Create an array of questions for user input
 `
 # ${title}
@@ -28,7 +28,7 @@ Use the command "${install}" to install any necessary dependencies.
 ## Usage
 ${usage}.
 ## Contributions
-${contributions}.
+${contribution}.
 ## Tests
 Stay up to date on tests as needed. To run tests, please use "${testing}".
 ## License
@@ -53,12 +53,12 @@ ${email}
 
      },{
         type:"list",
-        name:"gitHubLicense",
+        name:"license",
         choices:["Mit", "Eclipse" ,"GNU" , "ISC" , "NONE"],
         message:"Would you like to include a license for your project?"
      },{
         type:"input",
-        name:"Contribution",
+        name:"contribution",
         message:"Did you have any contributors on your project?"
      },{
       type:"input",
