@@ -7,12 +7,44 @@ const fileWrite = util.promisify(fs.writeFile);
 //fs for filesave
 const inquirer = require('inquirer');
 //inquirer for node
+const readme = ({ title, description, install, usage, contributions, testing, license, github, linkedin, email }) =>
 // : Create an array of questions for user input
-function prompt(){
- return inquirer.prompt([
+`
+# ${title}
+## Table of Contents:
+1. Description
+2. Installation
+3. Usage
+4. Contributons
+5. Tests
+6. License
+7. GitHub
+8. LinkedIn
+9. Email
+## Description
+${description}.
+## Installation
+Use the command "${install}" to install any necessary dependencies.
+## Usage
+${usage}.
+## Contributions
+${contributions}.
+## Tests
+Stay up to date on tests as needed. To run tests, please use "${testing}".
+## License
+License: ${license}.
+## GitHub
+${github}
+## LinkedIn
+${linkedin}
+## Email
+${email}
+            `
+
+ const questions=[
     { 
         type:"input",
-        name:"projectName",
+        name:"title",
         message:"what is your projects name?"
      },{
         type:"input",
@@ -22,7 +54,7 @@ function prompt(){
      },{
         type:"list",
         name:"gitHubLicense",
-        choices:["Mit, Eclipse ,GNU , ISC , NONE"],
+        choices:["Mit", "Eclipse" ,"GNU" , "ISC" , "NONE"],
         message:"Would you like to include a license for your project?"
      },{
         type:"input",
@@ -35,7 +67,7 @@ function prompt(){
 
      },{
       type:"input",
-      name:"usages",
+      name:"usage",
       message:"What is the purpose of this program?"
 
      },{
@@ -44,27 +76,19 @@ function prompt(){
       message:"Does this program require any testing?"
      },{
       type:"input",
-      name:"install",
-      message:"Is there any specific install instructions?(packages)"
-     },{
-      type:"input",
-      name:"gitHubAccount",
+      name:"github",
       message:"What is your github account name?"
      },{
       type:"input",
       name:"email",
       message:"What is the email you want listed for your project?"
      }
-  ]). then(function(answers){
-console.log(answers)
-
-})
-}
+  ]
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
    // fs.writeFile(fileWrite);
-   fs.writeFile('GeneratedFile.md',data, (err) => {
+   fs.writeFile(fileName,data, (err) => {
       if (err) 
       console.log(err);
       else{
@@ -75,9 +99,9 @@ function writeToFile(fileName, data) {
    }
    )}
 // TODO: Create a function to initialize app
-//FIGURE OUT WHY AWAIT DOESNT WORK
 function init() {
-   prompt().then(data => {return generateMarkdown(data);}).then(readmeInfo => writeToFile(README.md, readmeInfo));
+   inquirer.prompt(questions).then(readmeInfo => {
+      writeToFile("GeneratedFile.md", readmeInfo)});
 }
 
 // Function call to initialize app
