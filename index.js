@@ -101,8 +101,9 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
    inquirer.prompt(questions).then(readmeInfo => {
-      writeToFile("GeneratedFile.md", readmeInfo)});
-}
+      var readmeInfo = ({ readmeInfo.title, readmeInfo.description, readmeInfo.install, readmeInfo.usage, readmeInfo.contribution, readmeInfo.testing, readmeInfo.license, readmeInfo.github, readmeInfo.linkedin, readmeInfo.email }) =>
+      writeToFile("GeneratedFile.md", readme)});
+
 
 // Function call to initialize app
 init();
