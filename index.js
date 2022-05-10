@@ -7,8 +7,41 @@ const fileWrite = util.promisify(fs.writeFile);
 //fs for filesave
 const inquirer = require('inquirer');
 //inquirer for node
-const readme = ({ title, description, install, usage, contribution, testing, license, github, linkedin, email });
+const readme = ({ title, description, install, usage, contribution, testing, license, github, linkedin, email }) =>
 // : Create an array of questions for user input
+
+`
+# ${title}
+## Table of Contents:
+1. Description
+2. Installation
+3. Usage
+4. Contributons
+5. Tests
+6. License
+7. GitHub
+8. LinkedIn
+9. Email
+## Description
+${description}.
+## Installation
+Use the command "${install}" to install any necessary dependencies.
+## Usage
+${usage}.
+## Contributions
+${contribution}.
+## Tests
+Stay up to date on tests as needed. To run tests, please use "${testing}".
+## License
+License: ${license}.
+## GitHub
+${github}
+## LinkedIn
+${linkedin}
+## Email
+${email}
+            `
+
 
 
  const questions=[
@@ -70,8 +103,11 @@ function writeToFile(fileName, data) {
    )}
 // TODO: Create a function to initialize app
 function init() {
-   const readmeData = readme(readmeInfo);
-   writeToFile("GeneratedFile.md", readmeData);
-}
+   inquirer.prompt(questions).then(readmeInfo => {
+      const readmeData = readme(readmeInfo);
+      writeToFile("GeneratedFile.md", readmeData)
+      }
+      )
+      };
 // Function call to initialize app
 init();
