@@ -72,7 +72,6 @@ function writeToFile(fileName, data) {
 function init() {
    const readmeData = readme(readmeInfo);
    writeToFile("GeneratedFile.md", readmeData);
-   
 }
 // Function call to initialize app
 init();
