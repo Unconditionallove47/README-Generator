@@ -1,5 +1,5 @@
 
-# 1
+# ReadmeGenerator
 ## Table of Contents:
 1. Description
 2. Installation
@@ -11,21 +11,21 @@
 8. LinkedIn
 9. Email
 ## Description
-2.
+Helps to autimate the readme writing process.
 ## Installation
-Use the command "1" to install any necessary dependencies.
+Use the command "No" to install any necessary dependencies.
 ## Usage
-2.
+To help readme's be more streamlined and easier to write.
 ## Contributions
-2.
+AskBCS and Evan!.
 ## Tests
-Stay up to date on tests as needed. To run tests, please use "3".
+Stay up to date on tests as needed. To run tests, please use "No".
 ## License
-License: GNU.
+License: Mit.
 ## GitHub
-2
+UnconditionalLove47
 ## LinkedIn
-undefined
+Kalifp
 ## Email
-1
+Kpurcedesigns@gmail.com
             

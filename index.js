@@ -85,6 +85,10 @@ ${email}
       type:"input",
       name:"email",
       message:"What is the email you want listed for your project?"
+     },{
+      type:"input",
+      name:"linkedin",
+      message:"What is the linkedin you want listed for your project?"
      }
   ]
 
