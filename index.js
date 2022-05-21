@@ -1,7 +1,6 @@
 
 const fs = require('fs');
 const util = require('util');
-const README = require('./README.md');
 const generateMarkdown = require("./utils/generateMarkdown.js");
 const fileWrite = util.promisify(fs.writeFile);
 //fs for filesave

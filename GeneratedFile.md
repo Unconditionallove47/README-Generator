@@ -1,5 +1,5 @@
 
-# ReadmeGenerator
+# Portfolio
 ## Table of Contents:
 1. Description
 2. Installation
@@ -11,13 +11,13 @@
 8. LinkedIn
 9. Email
 ## Description
-Helps to autimate the readme writing process.
+Creating a portfolio for personal and professional use!.
 ## Installation
 Use the command "No" to install any necessary dependencies.
 ## Usage
-To help readme's be more streamlined and easier to write.
+To show off my current in class work ive done along with some others and links on how to contact me!.
 ## Contributions
-AskBCS and Evan!.
+N/a.
 ## Tests
 Stay up to date on tests as needed. To run tests, please use "No".
 ## License
