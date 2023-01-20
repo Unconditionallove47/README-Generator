@@ -1,5 +1,5 @@
 
-# Portfolio
+# Text Editor
 ## Table of Contents:
 1. Description
 2. Installation
@@ -11,21 +11,21 @@
 8. LinkedIn
 9. Email
 ## Description
-Creating a portfolio for personal and professional use!.
+A basic text editor application.
 ## Installation
-Use the command "No" to install any necessary dependencies.
+Use the command "NPM I" to install any necessary dependencies.
 ## Usage
-To show off my current in class work ive done along with some others and links on how to contact me!.
+To edit text and can also be downloaded.
 ## Contributions
-N/a.
+No.
 ## Tests
 Stay up to date on tests as needed. To run tests, please use "No".
 ## License
 License: Mit.
 ## GitHub
-UnconditionalLove47
+Unconditionallove47
 ## LinkedIn
 Kalifp
 ## Email
-Kpurcedesigns@gmail.com
+kpurcedesigns@gmail.com
             

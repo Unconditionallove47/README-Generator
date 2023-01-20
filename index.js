@@ -8,7 +8,7 @@ const inquirer = require('inquirer');
 //inquirer for node
 const readme = ({ title, description, install, usage, contribution, testing, license, github, linkedin, email }) =>
 // : Create an array of questions for user input
-
+//need to partially redo with better comments
 `
 # ${title}
 ## Table of Contents:
