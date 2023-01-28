@@ -41,7 +41,7 @@ ${linkedin}
 ${email}
             `
 
-
+//Need to make the output more useful, can seem very disconnected out of context.
 
  const questions=[
     { 

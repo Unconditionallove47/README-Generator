@@ -1,5 +1,5 @@
 
-# Text Editor
+# WayOfTheWater
 ## Table of Contents:
 1. Description
 2. Installation
@@ -11,11 +11,11 @@
 8. LinkedIn
 9. Email
 ## Description
-A basic text editor application.
+Coding and Photography Portfolio.
 ## Installation
-Use the command "NPM I" to install any necessary dependencies.
+Use the command "No" to install any necessary dependencies.
 ## Usage
-To edit text and can also be downloaded.
+To show my personal work.
 ## Contributions
 No.
 ## Tests
@@ -25,7 +25,7 @@ License: Mit.
 ## GitHub
 Unconditionallove47
 ## LinkedIn
-Kalifp
+kalifp
 ## Email
 kpurcedesigns@gmail.com
             
