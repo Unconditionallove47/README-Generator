@@ -51,7 +51,7 @@ ${email}
      },{
         type:"input",
         name:"description",
-        message:"What is a good beginning discription for your project"
+        message:"What is a good beginning description for your project"
 
      },{
         type:"list",
